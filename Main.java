@@ -62,6 +62,16 @@ class Main {
     System.out.println(n1 + " / " + n2 + " = " + div);
     System.out.println(n3 + " % " + n4 + " = " + mod);
 
+    Person tyson = new Person();
+
+    System.out.println("Age: " + tyson.getAge());
+    System.out.println("Name: " + tyson.getName());
+
+    tyson.setAge(38);
+    tyson.setName("Tyson");
+
+    System.out.println("Age: " + tyson.getAge());
+    System.out.println("Name: " + tyson.getName());
 
   }
 }
