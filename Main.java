@@ -12,6 +12,10 @@ class Main {
     char cNum = 'C';
     boolean bNum = true; //fully spell boolean
     String sInfo = "Cameron"; //capitalize the S in String
+    int newAge;
+    String newName;
+    double num5 = 0.0;
+
     System.out.println("Int: " + myNum); //this is how to print, the + is like another set of << for this purpose.
     System.out.println("Float: " + fNum);
     System.out.println("Double: " + dNum);
@@ -73,5 +77,45 @@ class Main {
     System.out.println("Age: " + tyson.getAge());
     System.out.println("Name: " + tyson.getName());
 
+    Person cameron = new Person();
+    cameron.setAge(24);
+    cameron.setName("Cameron");
+    System.out.println("Age: " + cameron.getAge());
+    System.out.println("Name: " + cameron.getName());
+
+    if (cameron.getAge() < tyson.getAge()) {
+      System.out.println("Dr. T is older than me");
+    }
+    else if (cameron.getAge() == tyson.getAge()) {
+      System.out.println("Dr. T! We're the same age!");
+    }
+    else {
+      System.out.println("Dr. T is younger than me");
+    }
+
+    Person newGuy = new Person();
+    System.out.println("Please enter an age and name for the new guy");
+    newAge = sc.nextInt();
+    newName = sc.next();
+
+    newGuy.setAge(newAge);
+    newGuy.setName(newName);
+
+    if (cameron.getAge() < newGuy.getAge()) {
+      System.out.println("The new guy is older than me");
+    }
+    else if (cameron.getAge() == newGuy.getAge()) {
+      System.out.println("The new guy is the same age as me");
+    }
+    else {
+      System.out.println("The new guy is younger than me");
+    }
+
+    System.out.println("Please enter a number for me to square for you");
+    num5 = sc.nextDouble();
+    System.out.println(getSquare(num5));
+
+
   }
+  public static double getSquare(double num5) { return num5 * num5; }
 }
